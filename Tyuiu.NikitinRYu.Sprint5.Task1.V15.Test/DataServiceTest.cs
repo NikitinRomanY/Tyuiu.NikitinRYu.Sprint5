@@ -17,10 +17,11 @@ namespace Tyuiu.NikitinRYu.Sprint5.Task1.V15.Test
             Assert.IsTrue(File.Exists(path));
 
             string[] lines = File.ReadAllLines(path);
-            Assert.AreEqual(13, lines.Length);
+            Assert.AreEqual(11, lines.Length);
 
-            string lineForX0 = lines[7];
-            Assert.IsTrue(lineForX0.Contains("0\t"));
+            Assert.AreEqual("-36,41", lines[0]);
+            Assert.AreEqual("-0,5", lines[5]);
+            Assert.AreEqual("-36,3", lines[10]);
         }
     }
 }

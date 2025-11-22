@@ -10,15 +10,11 @@ namespace Tyuiu.NikitinRYu.Sprint5.Task1.V15.Lib
 
             using (StreamWriter writer = new StreamWriter(path))
             {
-                writer.WriteLine("x\tF(x)");
-                writer.WriteLine("----------------");
-
                 for (int x = startValue; x <= stopValue; x++)
                 {
                     double denominator = x - 0.4;
                     double result;
 
-                    // Проверка деления на ноль
                     if (Math.Abs(denominator) < 0.001)
                     {
                         result = 0;
@@ -29,7 +25,7 @@ namespace Tyuiu.NikitinRYu.Sprint5.Task1.V15.Lib
                         result = Math.Round(result, 2);
                     }
 
-                    writer.WriteLine($"{x}\t{result}");
+                    writer.WriteLine(result.ToString().Replace(".", ","));
                 }
             }
 
